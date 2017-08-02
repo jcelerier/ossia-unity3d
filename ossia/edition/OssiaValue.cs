@@ -22,7 +22,7 @@ namespace Ossia
 		}
 		static public Value createBool(bool v)
 		{
-			return new Value(Network.ossia_value_create_bool(v));
+			return new Value(Network.ossia_value_create_bool(v ? 1 : 0));
 		}
 		static public Value createChar(char v)
 		{

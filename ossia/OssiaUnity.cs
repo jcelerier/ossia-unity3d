@@ -8,23 +8,23 @@ namespace Ossia
 {
 	public enum ossia_type
 	{
+		FLOAT,
+		INT,
+		VEC2F,
+		VEC3F,
+		VEC4F,
 		IMPULSE,
 		BOOL,
-		INT,
-		FLOAT,
-		CHAR,
 		STRING,
 		TUPLE,
-		GENERIC,
-		DESTINATION,
-		BEHAVIOR
+		CHAR
 	}
 
 	public enum ossia_access_mode
 	{
-		GET,
-		SET,
-		BI
+		BI, 
+		GET, 
+		SET
 	}
 
 	public enum ossia_bounding_mode
@@ -32,7 +32,9 @@ namespace Ossia
 		FREE,
 		CLIP,
 		WRAP,
-		FOLD
+		FOLD,
+		LOW,
+		HIGH
 	}
 
 	public delegate void ValueCallbackDelegate(Ossia.Value t);

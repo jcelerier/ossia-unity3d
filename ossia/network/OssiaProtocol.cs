@@ -36,6 +36,14 @@ namespace Ossia
 		}
 	}
 
+	public class OSCQuery : Protocol
+	{
+		public OSCQuery(int osc_port, int ws_port) : 
+		base(Network.ossia_protocol_oscquery_server_create(osc_port, ws_port))
+		{
+		}
+	}
+
 	public class OSC : Protocol
 	{
 		public OSC(string ip, int in_port, int out_port) : 

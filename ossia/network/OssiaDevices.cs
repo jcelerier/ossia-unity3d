@@ -12,7 +12,7 @@ public class OssiaDevices : MonoBehaviour {
 	static Ossia.Local local_protocol = null;
 	static Ossia.Device local_device = null;
 
-	static Ossia.Minuit minuit_protocol = null;
+	static Ossia.OSCQuery oscq_protocol = null;
 
 	static Ossia.Node scene_node;
 	Ossia.Network main;
@@ -44,13 +44,8 @@ public class OssiaDevices : MonoBehaviour {
 			    Debug.Log (local_device.GetName ());
 			    scene_node = local_device.GetRootNode().AddChild ("scene");
 
-
-				minuit_protocol = new Ossia.Minuit (
-				    "newDevice",
-					"127.0.0.1", 
-					13579, 
-					9998);
-		    	local_protocol.ExposeTo (minuit_protocol);
+				oscq_protocol = new Ossia.OSCQuery (1234, 5678);
+		    	local_protocol.ExposeTo (oscq_protocol);
 				Debug.Log ("Created ossia devices");
 		}
 	}

@@ -4,6 +4,7 @@ using Ossia;
 
 public class OssiaAttribute : MonoBehaviour {
 
+	// Attributes in libossia can be exposed this way : 
 	[Ossia.Expose("sympa")]
 	public int Sympa;
 
